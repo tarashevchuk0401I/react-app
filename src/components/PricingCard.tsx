@@ -1,3 +1,12 @@
+interface PricingCardProps {
+    title: string;
+    price: number;
+    requests: number;
+    contributors: number;
+    storage: string;
+    featured?: boolean;
+}
+
 export default function PricingCard({
                                         title,
                                         price,
@@ -5,7 +14,7 @@ export default function PricingCard({
                                         contributors,
                                         storage,
                                         featured = false,
-                                    }) {
+                                    }: PricingCardProps) {
     return (
         <div
             className={`flex flex-col items-center w-72 p-6 rounded-lg shadow-lg transition-transform ${
